@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Todos los cursos{% endblock title %}
+{% block custom_styles %} 
+<link rel="stylesheet" href="{% static 'css/styles.css'%}" />
+{% endblock custom_styles %}
+
+
+{% block content %}
+
+    <div class="layout">
+
+       {% include 'includes/sidebar.html' %}
+
+
+        <!-- Main content -->
+        <div class="main-content">
+            {% include 'includes/header.html' %}
+            <!-- Aquí va el contenido de la página -->
+            <main>
+                <!-- === COURSE CARDS === -->
+
+                <div class="carousel-wrapper">
+                    <div class="course-grid">  
+                            {% for course in courses_obj %}
+                                <div class="course-card">
+                                <a href="{% url 'course_detail' slug=course.slug  %}">
+                                    <img src="{{ course.image }}" alt="Course Image" class="course-img" />
+                                    <div class="course-info">
+                                        <div class="course-rating">
+                                            <span class="tag beginner">{{ course.level }}</span>
+                                            <div class="course-meta">
+                                                <span><i class="fa-solid fa-star"></i> {{course.rating}}</span>
+                                            </div>
+                                        </div>
+
+                                        <h3 class="course-title">{{course.title}}
+                                        </h3>
+                                        <div class="author"><img src="{{ course.owner.instructor_profile.photo}}"
+                                                alt=""><span>{{ course.owner.get_full_name }}</span></div>
+                                    </div>
+
+                                </a>
+                            </div>
+                            {% endfor %}
+                                
+                        
+                    </div>
+                    <div class="paginator">
+                        
+                        {% if courses_obj.has_previous %}
+                            <a href="?page=1&{{query_string}}">Primera</a>
+                            <a href="?page={{courses_obj.previous_page_number}}&{{query_string}}">Anterior</a>
+                        {% endif %}
+
+                        <span>Página {{courses_obj.number}} de {{courses_obj.paginator.num_pages}}</span>
+
+                        {% if courses_obj.has_next %}
+                            <a href="?page={{courses_obj.next_page_number}}&{{query_string}}">Siguiente</a>
+                            <a href="?page={{courses_obj.paginator.num_pages}}&{{query_string}}">Última</a>
+                        {% endif %}
+                            
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+   
+
+{% endblock content %}
+    
+{% block scripts %} <script src="{% static 'js/script.js'%}"></script>{% endblock scripts %}
