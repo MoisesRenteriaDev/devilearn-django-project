@@ -25,7 +25,7 @@
                     <div class="course-grid">  
                             {% for course in courses_obj %}
                                 <div class="course-card">
-                                <a href="{% url 'course_detail' slug=course.slug  %}">
+                                <a href="{% url 'student:course_detail' slug=course.slug  %}">
                                     <img src="{{ course.image }}" alt="Course Image" class="course-img" />
                                     <div class="course-info">
                                         <div class="course-rating">

@@ -76,7 +76,7 @@
                                 <li><i class="fa-solid fa-video"></i> {{ course.duration }} horas de contenido en video</li>
                                 <li><i class="fa-solid fa-graduation-cap"></i> {{ course.owner.get_full_name }}</li>
                             </ul>
-                            <a class="btn bnt-primary btn-course" href="{% url 'course_lessons' slug=course.slug%}">Continuar aprendiendo</a>
+                            <a class="btn bnt-primary btn-course" href="{% url 'student:course_lessons' slug=course.slug%}">Continuar aprendiendo</a>
 
                         </div>
                     </div>

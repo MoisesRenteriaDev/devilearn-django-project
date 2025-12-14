@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'apps.dashboard.middleware.RedirectAuthenticationMiddleware'
 ]
 
 ROOT_URLCONF = 'devilearn.urls'
@@ -107,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-mx'
 
 TIME_ZONE = 'UTC'
 
@@ -130,3 +131,8 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'profiles.User'
+
+LOGIN_REDIRECT_URL = "student:course_list"
+LOGOUT_REDIRECT_URL = "login"
+
+LOGIN_URL = "login"
