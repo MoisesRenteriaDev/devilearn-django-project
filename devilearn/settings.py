@@ -35,7 +35,7 @@ ALLOWED_HOSTS = [
 
 CSRF_TRUSTED_ORIGINS = [
     "https://devilearn-django-project-s6gi.onrender.com",
-    "https://devilearn-django-project-s6gi.onrender.com"
+    "https://www.devilearn-django-project-s6gi.onrender.com"
 ]
 
 mimetypes.add_type("text/javascript", ".js", True)
