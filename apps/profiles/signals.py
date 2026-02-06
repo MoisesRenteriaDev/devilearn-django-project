@@ -6,14 +6,14 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 
-@receiver(post_save, sender=settings.AUTH_USER_MODEL)
-def create_instructor_profile(sender, instance, created, **kwargs):
-    if created and instance.is_instructor:
-        InstructorProfile.objects.create(user=instance)
+# @receiver(post_save, sender=settings.AUTH_USER_MODEL)
+# def create_instructor_profile(sender, instance, created, **kwargs):
+#     if created and instance.is_instructor:
+#         InstructorProfile.objects.create(user=instance)
 
 
-@receiver(post_save, sender=User)
-def create_or_update_user_profile(sender, instance, created, **kwargs):
-    if created:
-        Profile.objects.create(user=instance)
-    instance.profile.save()
+# @receiver(post_save, sender=User)
+# def create_or_update_user_profile(sender, instance, created, **kwargs):
+#     if created:
+#         Profile.objects.create(user=instance)
+#     instance.profile.save()
