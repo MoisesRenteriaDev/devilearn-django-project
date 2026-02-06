@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Dashboard{% endblock title %}
+
+{% block custom_styles %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+{% endblock custom_styles %}
+
+{% block content %}
+<div class="layout">
+
+        {% include 'includes/sidebar.html' %}
+
+        <!-- Main content -->
+        <div class="main-content">
+            {% include 'includes/header.html' %}
+
+            <!-- Aquí va el contenido de la página -->
+            <main>
+                <h1>¡Hola, {{ request.user.get_full_name|default:request.user.username }}!</h1>
+                <p></p>
+                <section class="content">
+                    <div class="cards">
+                    
+                            <div class="card">
+                                <h3>Continuar viendo</h3>
+                                
+                                {% if last_course.slug %}
+                                    <div class="last-course">
+                                        <a href="{% url 'student:course_lessons' slug=last_course.slug %}">
+                                            <img src="{{ last_course.image }}" alt="{{ last_course.title }}" width="80%">
+                                            <p>Continuar: {{ last_course.title }}</p>
+                                        </a>
+                                    </div>
+                                    
+                                {% endif %}
+                                    
+                            </div>
+            
+                            <div class="card">
+                                <h3>Cursos </h3>
+                                <div class="dashboard-course">
+                                    
+                                    {% for course in courses %}
+                                        <article class="course-card" aria-label="Curso: {{course.title}}">
+                                            <a href="{% url 'student:course_detail' course.slug %}">
+                                                <img src="{{course.image}}" alt="Imagen del curso {{course.title}}"
+                                                class="course-card__image" loading="lazy" />
+                                                <div class="course-card__body">
+                                                    <h3 class="course-card__title">
+                                                        <a href="{% url 'student:course_detail' course.slug %}">{{course.title}}</a>
+                                                    </h3>
+                                                </div>
+                                            </a>
+                                        </article>
+                                    {% empty %}
+                                        <p>No tienes cursos aún</p>
+                                    {% endfor %}
+                                        
+                                    
+                                </div>
+                            </div>
+                        
+                            <div class="card">
+                                <h3>Perfil</h3>
+                                <div class="profile-info">
+                                    <p>Nombre: {{profile.user.get_full_name|default:profile.user.username}}</p>
+                                    <p>Empresa: {{ profile.company }}</p>
+                                    <p>Profesión: {{ profile.profession}}</p>
+                                </div>
+                                <a href="{% url 'profile' %}" class="btn">Ver perfil completo</a>
+                            </div>
+                   
+
+
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+{% endblock content %}
+    
+    
+
+{% block scripts %}
+<script src="{% static 'js/script.js'%}"></script>
+{% endblock scripts %}

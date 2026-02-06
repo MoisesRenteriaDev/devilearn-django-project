@@ -1,0 +1,124 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.stars-inline {
+    display: flex;
+    gap: .5rem;
+    margin: .25rem 0 1rem;
+}
+
+.star-option input {
+    display: none;
+}
+
+.star-text {
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.star-option input:checked+.star-text {
+    transform: scale(1.05);
+}
+
+.review {
+    padding: .75rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.review-head {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.review-stars {
+    margin-left: auto;
+}
+
+.err {
+    color: #b91c1c;
+    font-size: .875rem;
+    margin-top: .25rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: .5rem .9rem;
+    border-radius: .5rem;
+    border: 1px solid #ddd;
+    text-decoration: none
+}
+
+.btn-primary {
+    background: #111;
+    color: #fff;
+    border-color: #111
+}
+
+.btn-secondary {
+    width: auto;
+    background-color: #ccc;
+    color: #000;
+    display: inline-block;
+    padding: .5rem .9rem;
+    border-radius: .5rem;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    margin: 10px 0px;
+}
+
+.btn+.btn {
+    margin-left: .5rem
+}
+
+.star-rating {
+    border: 0;
+    padding: .25rem 0;
+    gap: .25rem;
+    direction: rtl;
+    text-align: end;
+    /* pinta desde la estrella 5 hacia la 1 */
+}
+
+.star-rating input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.star-rating label {
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+    transition: transform .05s ease;
+    color: #c7c7c7;
+}
+
+.star-rating label:hover,
+.star-rating label:hover~label {
+    color: #f5b301;
+    /* hover */
+}
+
+.star-rating input:checked~label {
+    color: #f5b301;
+    /* seleccionadas */
+}
+
+.star-rating label:hover,
+.star-rating input:focus+label {
+    transform: scale(1.05);
+}
+
+.review-form {
+    margin: 10px 0px;
+}
+
+.review-form div {
+    display: flex;
+    flex-direction: column;
+}

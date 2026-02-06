@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block title %}Mis cursos{% endblock title %}
+{% load static %}
+
+{% block custom_styles %}
+<link rel="stylesheet" href="{% static 'css/styles.css'%}">
+<link rel="stylesheet" href="{% static 'css/instructor_styles.css'%}">
+{% endblock custom_styles %}
+
+{% block content %}
+
+<div class="layout">
+    {% include 'includes/sidebar_instructor.html' %}
+    <div class="main-content">
+        {% include 'includes/header_instructor.html' %}
+
+        <main>
+
+            <h2 class="form-title">Contenidos del módulo: {{module.title}}</h2>
+            
+            <h3 class="add-new-course">Agregar módulo</h3>
+            <div class="add-new-course">
+                <a href="{% url 'instructor:content_add' module.id 'text' %}" class="button">Texto</a>
+                <a href="{% url 'instructor:content_add' module.id 'image' %}" class="button">Imagen</a>
+                <a href="{% url 'instructor:content_add' module.id 'file' %}" class="button">Archivo</a>
+                <a href="{% url 'instructor:content_add' module.id 'video' %}" class="button">Video</a>
+            </div>
+
+            <ul class="drag-list" id="content-list">
+                
+                {% for content in contents  %}
+                    <li class="drag-item" data-id="{{content.id}}">
+                        <strong>{{content.item.title}}</strong> <em>{{content.content_type.model}}</em>
+                        <div class="actions">
+                            <a href="{% url 'instructor:content_edit' module.id content.item.id content.content_type.model %}"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a href="{% url 'instructor:content_delete' content.id %}"><i class="fa-solid fa-trash"></i></a>
+                        </div>
+                    </li>
+                    {%empty%}
+                        <li>No hay contenidos aún.</li>
+                {% endfor %}
+                    
+
+            </ul>
+
+        </main>
+
+    </div>
+</div>
+
+{% endblock content %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script>
+const contentList = document.getElementById('content-list');
+const sortable = Sortable.create(contentList, {
+    animation: 150, 
+    onEnd: function(){
+        const order = Array.from(contentList.children).map(el => el.dataset.id);
+        fetch("{% url 'instructor:content_order' %}",{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{csrf_token}}',
+            },
+            body: JSON.stringify({order:order})
+        }).then(response=>{
+            if(!response.ok){
+                alert("Error al guardar el nuevo orden.")
+            }
+        })
+    }
+})
+
+
+</script>
+{% endblock scripts %}

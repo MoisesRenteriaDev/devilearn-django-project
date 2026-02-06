@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Perfil de usuario{% endblock title %}
+{% block custom_styles %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
+{% endblock custom_styles %}
+{% block content %}
+<div class="layout">
+
+        {% include 'includes/sidebar.html' %}
+
+        <!-- Main content -->
+        <div class="main-content">
+            <!-- Header -->
+            {% include 'includes/header.html' %}
+
+            <!-- Aquí va el contenido de la página -->
+            <main>
+                
+                {% if messages %}
+                    <div class="messages">
+                        
+                        {% for message in messages  %}
+                            <div class="alert alert-{{message.tags}}">
+                                {{message}}
+                            </div>  
+                        {% endfor %}
+                            
+                    </div>
+                {% endif %}
+                <div>
+                    <h2>Soporte</h2>
+                    <form method="post" class="form-support">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="{{form.subject.id_for_label}}">Asunto</label>
+                            {{ form.subject }}
+                            {{ form.subject.errors }}
+                        </div>
+                        <div class="form-group">
+                            <label for="{{form.message.id_for_label}}">Mensaje</label>
+                            {{ form.message }}
+                            {{ form.message.errors }}
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar</button>
+                    </form>
+                </div>     
+            
+            </main>
+        </div>
+    </div>
+{% endblock content %}
+    
+
+{% block scripts %}
+    <script src="{%static 'js/script.js' %}"></script>
+{% endblock scripts %}
+    

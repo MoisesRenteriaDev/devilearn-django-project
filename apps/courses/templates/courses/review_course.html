@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Detalle del curso{% endblock title %}
+
+{% block custom_styles %} 
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/reviews.css'%}" />
+{% endblock custom_styles %}
+
+{% block content %}
+<div class="layout">
+
+        {% include 'includes/sidebar.html' %}
+
+        <!-- Main content -->
+        <div class="main-content">
+            
+            {% include 'includes/header.html' %}
+
+            <!-- Aquí va el contenido de la página -->
+            <main>
+                <div class="container">
+                    <h2>Evaluar: {{course.title}}</h2>
+
+                    <form method="post" class="review-form">
+                        {% csrf_token %}
+                        <div class="stars-radio">
+                            <label for="">Tu calificación</label>
+                            <fieldset class="star-rating" aria-label="Calificación">
+                                <input type="radio" id="star5" name="rating" value="5"
+                                {% if form.initial.rating == 5 or form.data.rating|stringformat:"s" == '5' %}
+                                    checked
+                                {% endif %}
+                                    >
+                                <label for="star5" title="5 estrellas">★</label>
+                                <input type="radio" id="star4" name="rating" value="4"
+                                {% if form.initial.rating == 4 or form.data.rating|stringformat:"s" == '4' %}
+                                    checked
+                                {% endif %}
+                                    >
+                                <label for="star4" title="4 estrellas">★</label>
+                                <input type="radio" id="star3" name="rating" value="3"
+                                {% if form.initial.rating == 3 or form.data.rating|stringformat:"s" == '3' %}
+                                    checked
+                                {% endif %}
+                                    >
+                                <label for="star3" title="3 estrellas">★</label>
+                                <input type="radio" id="star2" name="rating" value="2"
+                                {% if form.initial.rating == 2 or form.data.rating|stringformat:"s" == '2' %}
+                                    checked
+                                {% endif %}
+                                    >
+                                <label for="star2" title="2 estrellas">★</label>
+                                <input type="radio" id="star1" name="rating" value="1"
+                                {% if form.initial.rating == 1 or form.data.rating|stringformat:"s" == '1' %}
+                                    checked
+                                {% endif %}
+                                    >
+                                <label for="star1" title="1 estrellas">★</label>
+                            </fieldset>
+                            {% if form.errors.rating %} <div class="err">{{ form.errors.comment }}</div>{% endif %}
+                        </div>
+
+                        <div class="field">
+                            {{form.comment.label_tag}}
+                            {{form.comment}}
+                            {% if form.errors.comment %} <div class="err">{{form.errors.comment}}</div> {% endif %}
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            {% if is_update %}Actualizar reseña {% else %}Enviar reseña{% endif %}
+                        </button>
+                        <a href="{% url 'student:course_detail' slug=course.slug %}">Volver al curso</a>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+{% endblock content %}
+    
+{% block scripts %}
+<script src="{% static 'js/script.js'%}"></script>
+{% endblock scripts %}
+    
+

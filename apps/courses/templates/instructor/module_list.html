@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block title %}Mis cursos{% endblock title %}
+{% load static %}
+
+{% block custom_styles %}
+<link rel="stylesheet" href="{% static 'css/styles.css'%}">
+<link rel="stylesheet" href="{% static 'css/instructor_styles.css'%}">
+{% endblock custom_styles %}
+
+{% block content %}
+
+<div class="layout">
+    {% include 'includes/sidebar_instructor.html' %}
+    <div class="main-content">
+        {% include 'includes/header_instructor.html' %}
+
+        <main>
+
+            <h2 class="form-title">Módulos de {{course.title}}</h2>
+            <div class="add-new-course">
+                <a href="{% url 'instructor:module_add' course.id %}">Agregar módulo</a>
+            </div>
+
+            <ul class="drag-list" id="module-list">
+                
+                {% for module in modules  %}
+                    <li class="drag-item" data-id="{{module.id}}">
+                        <strong>{{module.title}}</strong>
+                        <div class="actions">
+                            <a href="{% url 'content_list' module.id%}"><i class="fa-solid fa-eye"></i>Ver contenido</a>
+                            <a href="{% url 'module_edit' module.id %}"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a href="{% url 'module_delete' module.id %}"><i class="fa-solid fa-trash"></i></a>
+                        </div>
+                    </li>
+                    {%empty%}
+                        <li>No hay módulos aún.</li>
+                {% endfor %}
+                    
+
+            </ul>
+
+        </main>
+
+    </div>
+</div>
+
+{% endblock content %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script>
+const el = document.getElementById('module-list');
+const sortable = Sortable.create(el, {
+    animation: 150, 
+    onEnd: function(){
+        const order = Array.from(el.children).map(li => li.dataset.id);
+        fetch("{% url 'instructor:module_order' %}",{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{csrf_token}}',
+            },
+            body: JSON.stringify({order:order})
+        }).then(response=>{
+            if(!response.ok){
+                alert("Error al guardar el nuevo orden.")
+            }
+        })
+    }
+})
+
+
+</script>
+
+{% endblock scripts %}

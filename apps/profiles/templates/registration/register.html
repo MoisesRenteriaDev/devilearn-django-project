@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block custom_styles %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock custom_styles %}
+
+{% block content %}
+
+<div class="login-container">
+    <img src="{% static 'images/devilearn.png'%}" alt="Logo">
+    <h2 class="login-title">Iniciar sesión</h2>
+    <form method='post' class="login-form">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.username.label_tag }}
+            {{ form.username }}
+        </div>
+
+        <div class="form-group">
+            {{ form.first_name.label_tag }}
+            {{ form.first_name }}
+        </div>
+
+        <div class="form-group">
+            {{ form.last_name.label_tag }}
+            {{ form.last_name }}
+        </div>
+
+        <div class="form-group">
+            {{ form.email.label_tag }}
+            {{ form.email }}
+        </div>
+
+        <div class="form-group">
+            {{form.password1.label_tag}}
+            {{form.password1}}
+        </div>
+
+        <div class="form-group">
+            {{form.password2.label_tag}}
+            {{form.password2}}
+        </div>
+
+        <button type='submit' class='btn-submit'>Registrarse</button>
+    </form>
+    <p class="form-footer">¿Ya tienes una cuenta? <a href="{% url 'login'%}">Inicia sesión aquí</a> </p>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,37 @@
+ {% load static %}
+ <div class="sidebar">
+    <div class="logo">
+        <img src="{% static 'images/devilearn.png' %}" alt="Logo">
+    </div>
+    <ul class="menu">
+        <li><a class="menu-option" href="{% url 'dashboard' %}"><i
+                    class="fa-solid fa-house icon"></i><span>Dashboard</span></a>
+        </li>
+        <li><a class="menu-option" href="{% url 'student:course_list' %}"><i
+                    class="fa-solid fa-chalkboard-user icon"></i><span>Cursos</span></a></li>
+        
+        
+        {% if request.user.is_authenticated and request.user.is_instructor %}
+            <li><a class="menu-option" href="{% url 'instructor:course_list' %}"><i class="fa-solid fa-person-chalkboard"></i><span>Instructor</span></a></li>
+        {% endif %}
+            
+
+    </ul>
+    <ul class="bottom-menu">
+        <li><a class="menu-option" href="{% url 'profile' %}"><i class="fa-solid fa-user icon"></i><span>Perfil</span></a>
+        </li>
+        <li><a class="menu-option" href="{% url 'support'%}"><i class="fa-solid fa-question icon"></i><span>Soporte</span></a>
+        </li>
+        <li><a class="menu-option" href="{% url 'change_password' %}"><i class="fa-solid fa-gear icon"></i><span>Configuración</span></a>
+        </li>
+        <li>
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button class="btn-logout" type="submit">
+                    <i class="fa-solid fa-power-off"></i>
+                </button>
+
+            </form>
+        </li>
+    </ul>
+</div>

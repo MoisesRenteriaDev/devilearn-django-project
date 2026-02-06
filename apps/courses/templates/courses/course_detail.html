@@ -1,0 +1,196 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Detalle del curso{% endblock title %}
+
+{% block custom_styles %} 
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}" />
+{% endblock custom_styles %}
+
+{% block content %}
+<div class="layout">
+
+        {% include 'includes/sidebar.html' %}
+
+        <!-- Main content -->
+        <div class="main-content">
+            
+            {% include 'includes/header.html' %}
+
+            <!-- Aquí va el contenido de la página -->
+            <main>
+                <!-- === COURSE OVERVIEW === -->
+                <div class="course-layout">
+                    <!-- Accordion del curso -->
+                    <div class="course-sections">
+                        <h2>Contenido del curso</h2>
+                        <div class="accordion">
+                            
+                            {% for module in modules %}
+                                <div class="accordion-item">
+                                <button class="accordion-header">Sección {{forloop.counter}}: {{module.title}}</button>
+                                <div class="accordion-content">
+                                    <ul>
+                                        
+                                        {% for content in module.contents.all  %}
+                                        <li>
+                                            
+                                            {% if content.content_type.model == "video" %}
+                                                <i class="fa-solid fa-video"></i>
+                                            {% endif %}
+                                            {% if content.content_type.model == "file" %}
+                                                <i class="fa-solid fa-file"></i>
+                                            {% endif %}
+                                            {% if content.content_type.model == "text" %}
+                                                <i class="fa-solid fa-align-left"></i>
+                                            {% endif %}
+                                            {% if content.content_type.model == "image" %}
+                                                <i class="fa-solid fa-image"></i>
+                                            {% endif %}                                                
+                                            {{ content.item.title }}
+                                        </li>
+                                        {% empty %}
+                                        <li>Sin contenido aún.</li>
+                                        {% endfor %}
+                                        
+                                    </ul>
+                                </div>
+                                </div>
+                            {% empty %}
+                                <div>
+                                    <p>Sin contenido aún</p>
+                                </div>
+                            {% endfor %}
+                                
+                            <!-- Agrega más secciones similares -->
+                        </div>
+                    </div>
+
+                    <!-- Card lateral -->
+                    <div class="course-info-card">
+                        <div class="card-banner">
+                            <div class="tag">{{course.level}}</div>
+                            <img src="{%if course.image%}{{course.image}} {%else%}https://placehold.co/600x200/1e1e1e/ffffff?text={{course.title}} {%endif%}" alt="{{course.title}}" />
+                            <img class="author-avatar" src="{{course.owner.instructor_profile.photo}}" alt="Autor">
+                        </div>
+                        <div class="card-body">
+                            <h1>{{course.title}}</h1>
+                            <h3>Acerca de este curso</h3>
+                            <ul class="course-details">
+                                <li><i class="fa-solid fa-file"></i> {{ total_contents }} clases</li>
+                                <li><i class="fa-solid fa-video"></i> {{ course.duration }} horas de contenido en video</li>
+                                <li><i class="fa-solid fa-graduation-cap"></i> {{ course.owner.get_full_name }}</li>
+                            </ul>
+                            <a class="btn bnt-primary btn-course" 
+                            
+                            {% if is_enrolled %}
+                                href="{% url 'student:course_lessons' slug=course.slug%}"
+                            {% else %}
+                                href="javascript:void(0)"
+                                onclick="confirmEnrollment('{% url 'student:course_lessons' slug=course.slug %}')"
+                            {% endif %}
+                                
+                            >
+                                
+                                {% if is_enrolled %}
+                                    Continuar aprendiendo
+                                {% else %}
+                                    Inscribirse 
+                                {% endif %}
+                                    
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-reviews">
+                    <div class="rating-stats">
+                        
+                        {% if stats.total %}
+                            <p>
+                                Promedio: {{ stats.avg|floatformat:1 }} / 5
+                                &middot; {{ stats.total }} {{ stats.total|pluralize:"reseña,reseñas" }}
+                            </p>
+                            <div class="stars">
+                                {% with rounded=stats.avg|floatformat:0 %}
+                                    
+                                    {% for i in "12345"  %}
+                                        
+                                        {% if i <= rounded %}
+                                            ★
+                                        {% else %}
+                                            ☆
+                                        {% endif %}
+                                            
+                                    {% endfor %}
+                                        
+                                {% endwith %}
+                            </div>
+                        {% else %}
+                            <p>Este curso aún no tiene reseñas.</p>
+                        
+                        {% endif %}
+                            
+                    </div>
+
+                    <h3>Reseñas</h3>
+                    <ul class="reviews">
+                        
+                        {% for review in reviews  %}
+                            <li class="review">
+                                <div class="review-head">
+                                    <strong>{{ review.get_full_name|default:review.user.username }}</strong>
+                                    <span class="review-stars">
+                                        
+                                        {% for i in "12345"  %}
+                                           
+                                           {% if forloop.counter <= review.rating %}
+                                                ★
+                                            {% else %}
+                                                ☆
+                                           {% endif %}
+                                             
+                                        {% endfor %}
+                                            
+                                    </span>
+                                    <small>{{ review.created_at|date:"d M Y H:i" }}</small>
+                                </div>
+                                
+                                {% if review.comment %}
+                                    <p>{{ review.comment|linebreaksbr }}</p> 
+                                {% endif %}
+                            </li>
+                        {% empty %}
+                            <li>No hay reseñas todavía.</li>
+                        {% endfor %}   
+                    </ul>
+                </div>
+            </main>
+        </div>
+    </div>
+{% endblock content %}
+    
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="{% static 'js/script.js'%}"></script>
+<script>
+    function confirmEnrollment(url){
+        Swal.fire({
+            title: "¿Quieres inscribirte?",
+            text: "Podrás acceder a todas las lecciones de este curso.",
+            icon: "question",
+            showCancelButton: true,
+            confirmButtonText: 'Sí, inscribirme',
+            cancelButtonText: 'Cancelar',
+            reverseButtons: true
+        }).then((result) =>{
+            if(result.isConfirmed){
+                window.location.href = url;
+            }
+        })
+    }
+</script>
+{% endblock scripts %}
+    
+

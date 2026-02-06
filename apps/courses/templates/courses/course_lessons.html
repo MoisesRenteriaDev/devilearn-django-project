@@ -1,0 +1,152 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Lecciones {% endblock title %}
+
+{% block custom_styles %}
+ <link rel="stylesheet" href="{% static 'css/lessons.css' %}">
+ <style>
+    .progress-fill {
+        background: #00b894;
+        width: {{progress }}%;
+        height: 100%;   
+    }
+    .progress-bar {
+        background: #e0e0e0;
+        border-radius: 6px;
+        overflow: hidden;
+        height: 12px;
+        margin-top: 4px;
+    }
+ </style>
+{% endblock custom_styles %}
+
+{% block content %}
+
+    <header class="topbar">
+        <div class="acciones">
+            <div class="back-link"><a href="{% url 'student:course_list' %}"><button class="discusiones">← Ve al panel de control</button></a> </div>
+
+        </div>
+        <div class="logo"><img src="{% static 'images/devilearn.png' %}" alt="Logo devilearn"></div>
+    </header>
+
+   
+    <div class="layout">
+        <!-- SIDEBAR IZQUIERDA -->
+        <aside class="sidebar">
+
+
+            <h1 class="course-title">{{ course_title }}</h1>
+            <p class="progress">{{progress}}% completado</p>
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+
+
+            <input class="lesson-search" id="lesson-search" placeholder="Buscar...">
+            <ul id="search-suggestions" class="search-results" style="display: none;"></ul>
+
+            <!-- SECCIONES -->
+            <div class="accordion">
+                
+                {% for module in modules  %}
+                     <div class="accordion-item">
+                        <button class="accordion-header">Sección {{forloop.counter}}: {{module.title}} <span>{{module.completed_count}} / {{module.total_count}}</span></button>
+                        <div class="accordion-content">
+                            <ul>
+                                
+                                {% for content in  module.contents.all %}
+                                    <li data-title="{{content.item.title|lower}}">
+                                        <a href="{% url 'student:course_lessons' course.slug content.id %}" class="{% if content.id == current_content.id %} active-content {% endif %}">
+                                            {{ content.item.title }}
+                                        </a>
+
+                                        
+                                        {% if content.id in completed_ids %}
+                                            <span class="completed">✓</span>
+                                        {% endif %}
+                                            
+                                        
+                                    </li>
+                                {% endfor %}
+                                    
+                            </ul>
+                        </div>
+                    </div>
+                {% empty %}
+                    <div>
+                        <p>Sin contenido aún</p>
+                    </div>
+                {% endfor %}  
+            </div>
+
+            
+            {% if progress >= 50.0 %}
+                <div class="course-actions">
+                    <a href="{% url 'student:review_course' course.slug %}" class="btn btn-primary">
+                        Evaluar curso
+                    </a>
+
+                </div>
+            {% endif %}
+                
+
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL (VIDEO) -->
+        <main class="main-content">
+            
+            {% if current_content %}   
+            <div class="content-header">Introducción al curso</div>
+            
+            <div class="content-display">
+                
+                {% if current_content.content_type.model == "video" %}
+                    {% with video_url=current_content.item.url %}
+                        {% if "youtube.com" in video_url %}
+                            <iframe width="100%" height="600" src="https://www.youtube.com/embed/{{video_url|slice:'-11:'}}" frameborder="0" allowfullscreen></iframe>
+                        {% elif "vimeo.com" in video_url %}
+                            <iframe width="100%" height="600" src="https://player.vimeo.com/video/{{video_url|slice:'-9:'}}" frameborder="0" allowfullscreen></iframe>
+                        {% else %}
+                            <video controls width="100%">
+                                <source src="{{video_url}}" type="video/mp4">
+                                Tu navegador no soporta videos.
+                            </video>
+                        {% endif %}
+                    {% endwith %}
+                        
+
+                {% elif current_content.content_type.model == "file" %}
+                    <p><strong>Archivo disponible para descarga</strong></p>
+                    <a class="button" href="{{ current_content.item.file.url}}" download>Descargar archivo</a>
+                {% elif current_content.content_type.model == "image" %}
+                        <img src="{{ current_content.item.file.url }}" alt="{{current_content.item.title}}">
+                {% elif current_content.content_type.model == "text" %}
+                    <div class="text-content">
+                    {{ current_content.item.content|safe|linebreaks }}
+                    </div>
+                {% endif %}
+            </div>
+
+            <form action="{% url 'student:mark_complete' current_content.id %}" method="post">
+                {% csrf_token %}
+                
+                {% if current_content.id not in completed_ids %}
+                    <div class="bottom-bar">
+                        <button type="submit" class="btn-complete">Marcar como completado y continuar</button>
+                    </div>
+                {% endif %}
+                    
+            </form>
+            {% else %}
+                <div class="content-header">Selecciona una lección del menú izquierdo</div>
+            {% endif %}
+        </main>
+    </div>
+{% endblock content %}
+    
+{% block scripts %}
+<script src="{% static 'js/multimedia.js' %}"></script>
+
+{% endblock scripts %}
+    

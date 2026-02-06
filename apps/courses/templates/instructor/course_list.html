@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title %}Mis cursos{% endblock title %}
+{% load static %}
+
+{% block custom_styles %}
+<link rel="stylesheet" href="{% static 'css/styles.css'%}">
+<link rel="stylesheet" href="{% static 'css/instructor_styles.css'%}">
+{% endblock custom_styles %}
+
+{% block content %}
+
+<div class="layout">
+    {% include 'includes/sidebar_instructor.html' %}
+    <div class="main-content">
+        {% include 'includes/header_instructor.html' %}
+
+        <main>
+
+            <h2 class="form-title">Mis cursos</h2>
+            <div class="add-new-course">
+                <a href="{%url 'instructor:course_create'%}">Crear nuevo curso</a>
+            </div>
+
+            <div class="carouse-wrapper">
+                <div class="course-grid">
+                    
+                    {% for course in courses  %}
+                        <div class="course-card">
+                            <img src="{{course.image}}" alt="Course image" class="course-img">
+                            <div class="course-info">
+                                <h3 class="course-title">{{course.title}}</h3>
+
+                            </div>
+                            <a href="{% url 'instructor:module_list' course.id %}"><i class="fa-solid fa-eye"></i>Ver módulos</a>|
+                            <a href="{% url 'instructor:course_edit' course.id %}"><i class="fa-solid fa-pen-to-square"></i></a>|
+                            <a href="{% url 'instructor:course_delete' course.id%}"><i class="fa-solid fa-trash"></i></a>
+                        </div>
+                    {% endfor %}
+                        
+                </div>
+
+                 
+                 {% if is_paginated %}
+                    <div class="paginator">
+                        
+                        {% if page_obj.has_previous %}
+                            <a href="?page={{page_obj.previous_page_number}}">Anterior</a>
+                        {% endif %}
+                        <span>Página {{page_obj.number}} de {{page_obj.paginator.num_pages}}</span>
+                        {% if page_obj.has_next %}
+                            <a href="?page={{page_obj.next_page_number}}">Siguiente</a>
+                        {% endif %}
+                            
+                    </div>
+                 {% endif %}
+                     
+
+            </div>
+
+        </main>
+
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,4038 @@
+[
+  {
+    "model": "courses.category",
+    "pk": 1,
+    "fields": { "name": "Web Development", "slug": "web-development" }
+  },
+  {
+    "model": "courses.category",
+    "pk": 2,
+    "fields": { "name": "Software Development", "slug": "software-development" }
+  },
+  {
+    "model": "courses.category",
+    "pk": 3,
+    "fields": { "name": "Python", "slug": "python" }
+  },
+  {
+    "model": "courses.category",
+    "pk": 4,
+    "fields": { "name": "Golang", "slug": "golang" }
+  },
+  {
+    "model": "courses.category",
+    "pk": 5,
+    "fields": { "name": "Django", "slug": "django" }
+  },
+  {
+    "model": "courses.category",
+    "pk": 6,
+    "fields": { "name": "JavaScript", "slug": "javascript" }
+  },
+  {
+    "model": "courses.category",
+    "pk": 7,
+    "fields": { "name": "Data Science", "slug": "data-science" }
+  },
+  {
+    "model": "courses.category",
+    "pk": 8,
+    "fields": { "name": "Machine Learning", "slug": "machine-learning" }
+  },
+  {
+    "model": "courses.category",
+    "pk": 9,
+    "fields": { "name": "Mobile Development", "slug": "mobile-development" }
+  },
+  {
+    "model": "courses.category",
+    "pk": 10,
+    "fields": { "name": "DevOps", "slug": "devops" }
+  },
+  {
+    "model": "courses.module",
+    "pk": 7,
+    "fields": {
+      "course": 16,
+      "title": "Introducción al curso",
+      "description": "Introducción al curso completo",
+      "order": 0
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 8,
+    "fields": {
+      "course": 16,
+      "title": "Introducción a FAST API",
+      "description": "Fast API completo",
+      "order": 1
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 9,
+    "fields": {
+      "course": 16,
+      "title": "API con FAST API",
+      "description": "APIs completas",
+      "order": 2
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 10,
+    "fields": {
+      "course": 16,
+      "title": "Modulo de prueba",
+      "description": "Bienvenido a todos al curso de prueba",
+      "order": 3
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 12,
+    "fields": {
+      "course": 16,
+      "title": "Modulo de prueba 2",
+      "description": "Modulo de prueba 2",
+      "order": 4
+    }
+  },
+  {
+    "model": "courses.module",
+    "pk": 14,
+    "fields": {
+      "course": 5,
+      "title": "Introducción a HTML",
+      "description": "Conceptos HTML",
+      "order": 0
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "courses", "model": "category" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "courses", "model": "course" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "courses", "model": "coursecategory" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "courses", "model": "module" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "courses", "model": "enrollment" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "courses", "model": "progress" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "courses", "model": "review" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "profiles", "model": "user" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "profiles", "model": "instructorprofile" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "admin", "model": "logentry" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "auth", "model": "permission" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "auth", "model": "group" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "contenttypes", "model": "contenttype" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "sessions", "model": "session" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "courses", "model": "file" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "courses", "model": "text" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "courses", "model": "content" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "courses", "model": "image" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "courses", "model": "video" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "courses", "model": "completedcontent" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": { "app_label": "profiles", "model": "profile" }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "49si9wsqgttyi91syksebmqer6ffk6qf",
+    "fields": {
+      "session_data": ".eJx9kE1PhDAURf_KhLVTLC2lzI6JcaKJXxMX46p5LaWUAUpoMSbG_25JZqEu3J57z33J-0wELKEVi9ezsHWyS3By9ZNJUGc9rkHdwWgcUm4Ms5VoraBL6tGDq3W_v3R_DbTg22g3jGY0g4xhpjguudRcFkznUpYUK0JqrDMqOc1VVhaUawJlg-FaEZ1zqQoaR3vwQSi3zF4L3y9mXY0IJrudYIbtYNXs4sl3q6zzf4RgQ6-jcRtZ9Xy3WY3Nv4YdwKxGG8Lkd2lqh8nNAal6RKG149k2VsVvDCmjJGckhYqX5uNkXl8O4Xgs3lx32oub--rx8IRRN5nk6xvhLXxi:1umzyE:DmV1aaRfXSa-wmVThc5MLb7_KfSv-NPVWcQUIour3pM",
+      "expire_date": "2025-08-29T19:20:10.572Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "apm01k3t2i67io3cpr2koovu5ke5v6m6",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlle_7Ap6XMGa73e4ABypDipEHeHSCmgfTPzXiLhtta0dV7SVMRFgDj9bhnpwW0H5Y7tNkua27pMWe6KPGiXw1z4eT3cv4OKvX5rb6KzzhHpoDSzCtqSB7Q0skdTACwaHUmxCxH0aG2JwUcD54CcTY7i_QHBEjcY:1ue422:Nl46mmNWDq47lz4eXpwPDpbpJEAEqhezjuBEy7syOZg",
+      "expire_date": "2025-08-05T03:51:10.399Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "codfaylkib40objzp4cuiob00ped7nyh",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hBgZIou3XsGMjCDVA1NSrsy3l2bdKHb_977LxVpXWpcu8xxZHVWoA6_W6L8kLYBvlO7TTpPbZnHpDdF77Tr68TyvOzu30GlXr81DhgoAVNGcZiYjB0YjtaD4SwefbE-mwKOoHAohhmzC-C8NU7Syar3B-5kN-k:1ufEXl:jjjLukQXF9YqrtG0fauxX5gBwdeq4XRipcTOYI97Y8c",
+      "expire_date": "2025-08-08T09:16:45.555Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "e9ja1rz7z3wq1e71wkwdptnvuigghiuz",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hBgZIou3XsGMjCDVA1NSrsy3l2bdKHb_977LxVpXWpcu8xxZHVWoA6_W6L8kLYBvlO7TTpPbZnHpDdF77Tr68TyvOzu30GlXr81DhgoAVNGcZiYjB0YjtaD4SwefbE-mwKOoHAohhmzC-C8NU7Syar3B-5kN-k:1ufCw4:6hlPKtN5_Sw080iaCIskQcZTMZ5OkPrVzHkFJccic5o",
+      "expire_date": "2025-08-08T07:33:44.240Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "fi90qkz8omjdzdm1i33f87zv1cwvz67n",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hBAHMCl-56BMMwgVUOT0q6Md7dNutDtf-_9t4hpXWpcO89xJHEVTpx-N0z5yW0H9EjtPsk8tWUeUe6KPGiXw0T8uh3u30FNvW51ObNTBSyw58KBPCangTghWzRsCLQP4bIxAkDWhMYo67xnpcFkEJ8vFpg4rw:1uk6T2:HXppG47WXBURNBzcq3YPbuJ7FkwqeF_oQp_lthd3qkM",
+      "expire_date": "2025-08-21T19:40:00.592Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "g7sfl0gh3bx2rc58njc2f8gxh8gepshz",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlle_7Ap6XMGa73e4ABypDipEHeHSCmgfTPzXiLhtta0dV7SVMRFgDj9bhnpwW0H5Y7tNkua27pMWe6KPGiXw1z4eT3cv4OKvX5rb6KzzhHpoDSzCtqSB7Q0skdTACwaHUmxCxH0aG2JwUcD54CcTY7i_QHBEjcY:1uZMM0:zdBrG8Wv4sxq_qw-8tX9XQM46v7TiMIxVHgYE9WAlg0",
+      "expire_date": "2025-07-23T04:24:20.237Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "k7b639scvbqc5mpquzv1llkp2qfbxo3z",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlle_7Ap6XMGa73e4ABypDipEHeHSCmgfTPzXiLhtta0dV7SVMRFgDj9bhnpwW0H5Y7tNkua27pMWe6KPGiXw1z4eT3cv4OKvX5rb6KzzhHpoDSzCtqSB7Q0skdTACwaHUmxCxH0aG2JwUcD54CcTY7i_QHBEjcY:1ulbh8:a8-Jmu0-kapcx6piJvamgkkrHQrlG-GzhniKIzxUc_c",
+      "expire_date": "2025-08-25T23:12:46.623Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "kke6sxcydancby4xwvzwqwwjaa2yao2o",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlnY3vhDSZ8zWLvrDQ4gR8qnQtwdIqWA9s3Me6mM21rztsicx6IuyqjT70bID2k7KHdst0nz1NZ5JL0r-qCL7qciz-vh_h1UXOq3HjxYsGi98RxNiiSRgpeOKIFh54oRCxShY5sCRHGYBoNndtJF4gDq_QHLzDd7:1uleu7:Kc81Wb9ckREanN8ZlOYnpMv_VT19nMLM3sY-1o5hytE",
+      "expire_date": "2025-08-26T02:38:23.347Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "n1rykk06ptzfvtbxdrfp1aw8pljobli6",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGln-rJ01JT1nsHa9NgmgRMqnQtwdIqWA9s3Me6lM29rnbalzHkSdVVCn342pPOq4A7nTeJt0mcZ1Hljvij7ooq-T1OflcP8Oelr6b82BIVlMoWEHgrFEtCTVh5ac-ABsokV2ZBxFRBNblwDEsyuOAa1X7w_LkDbz:1ujpAF:_UW9n0wiv1lPy4tTAPIwlPti7EITcFmKnh65K_ViNx4",
+      "expire_date": "2025-08-21T01:11:27.632Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "njbylalimjjqvv9iumeh1vk1zv015tyk",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlle_7Ap6XMGa73e4ABypDipEHeHSCmgfTPzXiLhtta0dV7SVMRFgDj9bhnpwW0H5Y7tNkua27pMWe6KPGiXw1z4eT3cv4OKvX5rb6KzzhHpoDSzCtqSB7Q0skdTACwaHUmxCxH0aG2JwUcD54CcTY7i_QHBEjcY:1ujp3d:YIzqys92NByrJ4kQtReIi8WpjkunQp5wDX78WhNPZcM",
+      "expire_date": "2025-08-21T01:04:37.402Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "nkxq2b4vxhcw7hsbyylycpv8rjryfiir",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlle_7Ap6XMGa73e4ABypDipEHeHSCmgfTPzXiLhtta0dV7SVMRFgDj9bhnpwW0H5Y7tNkua27pMWe6KPGiXw1z4eT3cv4OKvX5rb6KzzhHpoDSzCtqSB7Q0skdTACwaHUmxCxH0aG2JwUcD54CcTY7i_QHBEjcY:1ujnK1:x4vrppa0UmMUekIo1BVhXfLeOiqdZaGufPQQplIytos",
+      "expire_date": "2025-08-20T23:13:25.599Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "s7wb1qhq35scf51mwkl82vydd9qtok6u",
+    "fields": {
+      "session_data": ".eJxd0NtqhDAQBuBXWYRCCzWeE93LllJ7cHdZpFQoSMwkJrueMLE3pe--CnvRejv_Nz_D_FglnYwsJ83HUoG1tWLr_u-souzMuyWAE-3qHrG-M6Oq0ELQNdUo64E3D1f7r0BSLedt300I55gwTnCIIeKEQBgIEOAFuHL9AAglNIlDnkQEGBHYjRPfB15hSFgk5tKGalOyfho1L3Uz1XOrmm_pYWJMfU2uK4LOprY0bbPSRpmGz_xlzTd0k-bZ-4qrltYLl8YMeus4qh360SAGHTJSdWclFJv_0Do4DCIcOPWzJ75p8XnctW_Za06ztDiUhyJP9zv7cf_xdLzx3VvvDp2G2vq9APW7e7E:1un7Pe:MIJ5uC-dcQHgKj7dkEn7ejmTRfiEI3-1fDDGiUpt3iQ",
+      "expire_date": "2025-08-30T03:16:58.430Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "vz1i4ssj765pr1swckc21bspsgvlyqhk",
+    "fields": {
+      "session_data": "e30:1ujO1N:WpeI-0LXart8H5hJZixRrt2Y1teoUM1X2nGg6r9PMok",
+      "expire_date": "2025-08-19T20:12:29.717Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "w8mm7pkcuev21ihd48nz1iyq15bmzbay",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlle_7Ap6XMGa73e4ABypDipEHeHSCmgfTPzXiLhtta0dV7SVMRFgDj9bhnpwW0H5Y7tNkua27pMWe6KPGiXw1z4eT3cv4OKvX5rb6KzzhHpoDSzCtqSB7Q0skdTACwaHUmxCxH0aG2JwUcD54CcTY7i_QHBEjcY:1uYoAA:y412zgTFGkUd9sKRpCrQC4dN922WfHvJq0VztKux6XE",
+      "expire_date": "2025-07-21T15:53:50.963Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "zf4ku56z9uzt1f4zbnttx2u8kobgd7o0",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlle_7Ap6XMGa73e4ABypDipEHeHSCmgfTPzXiLhtta0dV7SVMRFgDj9bhnpwW0H5Y7tNkua27pMWe6KPGiXw1z4eT3cv4OKvX5rb6KzzhHpoDSzCtqSB7Q0skdTACwaHUmxCxH0aG2JwUcD54CcTY7i_QHBEjcY:1uZC3r:bFVPv_FVtjAD7UyOeKthKUvsa6rXvVfeFB2dfw7C0ms",
+      "expire_date": "2025-07-22T17:24:55.071Z"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add category",
+      "content_type": ["courses", "category"],
+      "codename": "add_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change category",
+      "content_type": ["courses", "category"],
+      "codename": "change_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete category",
+      "content_type": ["courses", "category"],
+      "codename": "delete_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view category",
+      "content_type": ["courses", "category"],
+      "codename": "view_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add course",
+      "content_type": ["courses", "course"],
+      "codename": "add_course"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change course",
+      "content_type": ["courses", "course"],
+      "codename": "change_course"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete course",
+      "content_type": ["courses", "course"],
+      "codename": "delete_course"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view course",
+      "content_type": ["courses", "course"],
+      "codename": "view_course"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add course category",
+      "content_type": ["courses", "coursecategory"],
+      "codename": "add_coursecategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change course category",
+      "content_type": ["courses", "coursecategory"],
+      "codename": "change_coursecategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete course category",
+      "content_type": ["courses", "coursecategory"],
+      "codename": "delete_coursecategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view course category",
+      "content_type": ["courses", "coursecategory"],
+      "codename": "view_coursecategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add module",
+      "content_type": ["courses", "module"],
+      "codename": "add_module"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change module",
+      "content_type": ["courses", "module"],
+      "codename": "change_module"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete module",
+      "content_type": ["courses", "module"],
+      "codename": "delete_module"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view module",
+      "content_type": ["courses", "module"],
+      "codename": "view_module"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add enrollment",
+      "content_type": ["courses", "enrollment"],
+      "codename": "add_enrollment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change enrollment",
+      "content_type": ["courses", "enrollment"],
+      "codename": "change_enrollment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete enrollment",
+      "content_type": ["courses", "enrollment"],
+      "codename": "delete_enrollment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view enrollment",
+      "content_type": ["courses", "enrollment"],
+      "codename": "view_enrollment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add progress",
+      "content_type": ["courses", "progress"],
+      "codename": "add_progress"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change progress",
+      "content_type": ["courses", "progress"],
+      "codename": "change_progress"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete progress",
+      "content_type": ["courses", "progress"],
+      "codename": "delete_progress"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view progress",
+      "content_type": ["courses", "progress"],
+      "codename": "view_progress"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add review",
+      "content_type": ["courses", "review"],
+      "codename": "add_review"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change review",
+      "content_type": ["courses", "review"],
+      "codename": "change_review"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete review",
+      "content_type": ["courses", "review"],
+      "codename": "delete_review"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view review",
+      "content_type": ["courses", "review"],
+      "codename": "view_review"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add user",
+      "content_type": ["profiles", "user"],
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change user",
+      "content_type": ["profiles", "user"],
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete user",
+      "content_type": ["profiles", "user"],
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view user",
+      "content_type": ["profiles", "user"],
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add instructor profile",
+      "content_type": ["profiles", "instructorprofile"],
+      "codename": "add_instructorprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change instructor profile",
+      "content_type": ["profiles", "instructorprofile"],
+      "codename": "change_instructorprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete instructor profile",
+      "content_type": ["profiles", "instructorprofile"],
+      "codename": "delete_instructorprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view instructor profile",
+      "content_type": ["profiles", "instructorprofile"],
+      "codename": "view_instructorprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": ["admin", "logentry"],
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": ["admin", "logentry"],
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": ["admin", "logentry"],
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": ["admin", "logentry"],
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add permission",
+      "content_type": ["auth", "permission"],
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change permission",
+      "content_type": ["auth", "permission"],
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": ["auth", "permission"],
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view permission",
+      "content_type": ["auth", "permission"],
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add group",
+      "content_type": ["auth", "group"],
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change group",
+      "content_type": ["auth", "group"],
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete group",
+      "content_type": ["auth", "group"],
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view group",
+      "content_type": ["auth", "group"],
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add content type",
+      "content_type": ["contenttypes", "contenttype"],
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change content type",
+      "content_type": ["contenttypes", "contenttype"],
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": ["contenttypes", "contenttype"],
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view content type",
+      "content_type": ["contenttypes", "contenttype"],
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add session",
+      "content_type": ["sessions", "session"],
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change session",
+      "content_type": ["sessions", "session"],
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete session",
+      "content_type": ["sessions", "session"],
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view session",
+      "content_type": ["sessions", "session"],
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add file",
+      "content_type": ["courses", "file"],
+      "codename": "add_file"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change file",
+      "content_type": ["courses", "file"],
+      "codename": "change_file"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete file",
+      "content_type": ["courses", "file"],
+      "codename": "delete_file"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view file",
+      "content_type": ["courses", "file"],
+      "codename": "view_file"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add text",
+      "content_type": ["courses", "text"],
+      "codename": "add_text"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change text",
+      "content_type": ["courses", "text"],
+      "codename": "change_text"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete text",
+      "content_type": ["courses", "text"],
+      "codename": "delete_text"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view text",
+      "content_type": ["courses", "text"],
+      "codename": "view_text"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add content",
+      "content_type": ["courses", "content"],
+      "codename": "add_content"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change content",
+      "content_type": ["courses", "content"],
+      "codename": "change_content"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete content",
+      "content_type": ["courses", "content"],
+      "codename": "delete_content"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view content",
+      "content_type": ["courses", "content"],
+      "codename": "view_content"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add image",
+      "content_type": ["courses", "image"],
+      "codename": "add_image"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change image",
+      "content_type": ["courses", "image"],
+      "codename": "change_image"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete image",
+      "content_type": ["courses", "image"],
+      "codename": "delete_image"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view image",
+      "content_type": ["courses", "image"],
+      "codename": "view_image"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add video",
+      "content_type": ["courses", "video"],
+      "codename": "add_video"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change video",
+      "content_type": ["courses", "video"],
+      "codename": "change_video"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete video",
+      "content_type": ["courses", "video"],
+      "codename": "delete_video"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view video",
+      "content_type": ["courses", "video"],
+      "codename": "view_video"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add completed content",
+      "content_type": ["courses", "completedcontent"],
+      "codename": "add_completedcontent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change completed content",
+      "content_type": ["courses", "completedcontent"],
+      "codename": "change_completedcontent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete completed content",
+      "content_type": ["courses", "completedcontent"],
+      "codename": "delete_completedcontent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view completed content",
+      "content_type": ["courses", "completedcontent"],
+      "codename": "view_completedcontent"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add profile",
+      "content_type": ["profiles", "profile"],
+      "codename": "add_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change profile",
+      "content_type": ["profiles", "profile"],
+      "codename": "change_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete profile",
+      "content_type": ["profiles", "profile"],
+      "codename": "delete_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can view profile",
+      "content_type": ["profiles", "profile"],
+      "codename": "view_profile"
+    }
+  },
+  {
+    "model": "courses.content",
+    "pk": 1,
+    "fields": {
+      "module": 7,
+      "content_type": ["courses", "text"],
+      "object_id": 1,
+      "order": 3
+    }
+  },
+  {
+    "model": "courses.content",
+    "pk": 2,
+    "fields": {
+      "module": 8,
+      "content_type": ["courses", "video"],
+      "object_id": 1,
+      "order": 0
+    }
+  },
+  {
+    "model": "courses.content",
+    "pk": 3,
+    "fields": {
+      "module": 7,
+      "content_type": ["courses", "video"],
+      "object_id": 2,
+      "order": 1
+    }
+  },
+  {
+    "model": "courses.content",
+    "pk": 6,
+    "fields": {
+      "module": 7,
+      "content_type": ["courses", "video"],
+      "object_id": 4,
+      "order": 0
+    }
+  },
+  {
+    "model": "courses.content",
+    "pk": 7,
+    "fields": {
+      "module": 7,
+      "content_type": ["courses", "video"],
+      "object_id": 5,
+      "order": 2
+    }
+  },
+  {
+    "model": "courses.content",
+    "pk": 8,
+    "fields": {
+      "module": 7,
+      "content_type": ["courses", "video"],
+      "object_id": 6,
+      "order": 4
+    }
+  },
+  {
+    "model": "courses.content",
+    "pk": 9,
+    "fields": {
+      "module": 14,
+      "content_type": ["courses", "text"],
+      "object_id": 2,
+      "order": 0
+    }
+  },
+  {
+    "model": "auth.group",
+    "fields": {
+      "name": "Intructores",
+      "permissions": [
+        ["add_content", "courses", "content"],
+        ["change_content", "courses", "content"],
+        ["delete_content", "courses", "content"],
+        ["view_content", "courses", "content"],
+        ["add_course", "courses", "course"],
+        ["change_course", "courses", "course"],
+        ["view_course", "courses", "course"],
+        ["add_module", "courses", "module"],
+        ["change_module", "courses", "module"],
+        ["delete_module", "courses", "module"],
+        ["view_module", "courses", "module"]
+      ]
+    }
+  },
+  {
+    "model": "profiles.user",
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$ltS9d8vygX99zC57vIZ5jJ$emz2MCpZp0sscjVJRbBC99HhS5rdgss24UwJj9ZOAN4=",
+      "last_login": "2025-08-12T22:37:51.080Z",
+      "is_superuser": true,
+      "username": "ricardo",
+      "first_name": "Ricardo",
+      "last_name": "Cuéllar",
+      "email": "ricardo_cuellar@email2.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-07-07T15:52:59Z",
+      "is_instructor": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "profiles.user",
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$JC0xpZbE0DFCEhBzATpd4u$Gq4RQaY4sVAROQyRe/VFsS89zdn/Yt+V0zfwaXQ7xAc=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "ricardoProfe",
+      "first_name": "Ricardo",
+      "last_name": "Profe",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-07-07T17:42:04Z",
+      "is_instructor": true,
+      "groups": [["Intructores"]],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "profiles.user",
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$HLJZWUucsLSiJJDBQ3y1Ie$CEw1bkPfoKpsWrTMmgnYajCC89joVlWXTpBEevawNvs=",
+      "last_login": "2025-07-25T09:16:45.551Z",
+      "is_superuser": false,
+      "username": "RicardoAlumno",
+      "first_name": "Ricardo",
+      "last_name": "Alumno",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-07-07T17:42:59Z",
+      "is_instructor": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "profiles.user",
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$6LS6XfaI1nlQVQEPsWf0ip$pljzSelbS8W7EgaNWjjkjvCCDobSlpap7uMRE/4qWm4=",
+      "last_login": "2025-08-07T01:05:51.714Z",
+      "is_superuser": false,
+      "username": "ricardoprueba",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-08-07T01:05:11Z",
+      "is_instructor": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "profiles.user",
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$SXlskFfLdbCkfZuiNjmeSt$8Qb/X+1AYpx7nlJxdOeBLzbcPKEN+7dPWcfqUjZt85U=",
+      "last_login": "2025-08-07T01:11:27.630Z",
+      "is_superuser": false,
+      "username": "ricardosignal",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-08-07T01:10:58.688Z",
+      "is_instructor": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "profiles.user",
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$lo5KF7QCuu6qq8SvZI7vEK$rXP+DDB9bD3lsHapmT+ibkBaFqcsxyZRASLu5b5vt24=",
+      "last_login": "2025-08-07T19:40:00.590Z",
+      "is_superuser": false,
+      "username": "juanitobanana",
+      "first_name": "Juan",
+      "last_name": "Pérez",
+      "email": "juanitobanana@email.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-08-07T19:40:00.405Z",
+      "is_instructor": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "profiles.user",
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$NKb4RIrq5c8WLwMFY6QG0w$onscmzp2RbEvtpKJHIPDeox8sgMWMWi0LPFIJFb/5Po=",
+      "last_login": "2025-08-12T22:39:39.323Z",
+      "is_superuser": false,
+      "username": "JuanAlumno",
+      "first_name": "Juan",
+      "last_name": "Pérez",
+      "email": "juanperez@email.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-08-12T22:39:27.632Z",
+      "is_instructor": false,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "courses.completedcontent",
+    "pk": 1,
+    "fields": {
+      "user": ["ricardo"],
+      "content": 1,
+      "completed_at": "2025-07-25T04:16:53.557Z"
+    }
+  },
+  {
+    "model": "courses.completedcontent",
+    "pk": 8,
+    "fields": {
+      "user": ["ricardo"],
+      "content": 3,
+      "completed_at": "2025-07-25T06:01:30.891Z"
+    }
+  },
+  {
+    "model": "courses.completedcontent",
+    "pk": 9,
+    "fields": {
+      "user": ["ricardo"],
+      "content": 6,
+      "completed_at": "2025-07-25T06:01:41.848Z"
+    }
+  },
+  {
+    "model": "courses.completedcontent",
+    "pk": 10,
+    "fields": {
+      "user": ["ricardo"],
+      "content": 7,
+      "completed_at": "2025-07-25T06:01:54.846Z"
+    }
+  },
+  {
+    "model": "courses.completedcontent",
+    "pk": 11,
+    "fields": {
+      "user": ["JuanAlumno"],
+      "content": 7,
+      "completed_at": "2025-08-12T23:34:40.368Z"
+    }
+  },
+  {
+    "model": "courses.completedcontent",
+    "pk": 12,
+    "fields": {
+      "user": ["JuanAlumno"],
+      "content": 3,
+      "completed_at": "2025-08-14T21:32:06.330Z"
+    }
+  },
+  {
+    "model": "courses.completedcontent",
+    "pk": 13,
+    "fields": {
+      "user": ["JuanAlumno"],
+      "content": 6,
+      "completed_at": "2025-08-14T21:32:08.821Z"
+    }
+  },
+  {
+    "model": "courses.completedcontent",
+    "pk": 14,
+    "fields": {
+      "user": ["JuanAlumno"],
+      "content": 1,
+      "completed_at": "2025-08-15T17:29:18.676Z"
+    }
+  },
+  {
+    "model": "courses.video",
+    "pk": 1,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "¿Qué es FAST API?",
+      "created_at": "2025-07-09T19:58:29.279Z",
+      "updated_at": "2025-07-09T19:58:29.279Z",
+      "url": "https://www.python.org/"
+    }
+  },
+  {
+    "model": "courses.video",
+    "pk": 2,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Vimeo example",
+      "created_at": "2025-07-09T20:52:47.729Z",
+      "updated_at": "2025-07-25T06:03:34.324Z",
+      "url": "https://vimeo.com/673993420"
+    }
+  },
+  {
+    "model": "courses.video",
+    "pk": 3,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Como hacer preguntas",
+      "created_at": "2025-07-23T05:01:48.258Z",
+      "updated_at": "2025-07-23T05:22:40.345Z",
+      "url": "https://youtube.com/ricardocuellar"
+    }
+  },
+  {
+    "model": "courses.video",
+    "pk": 4,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Marcas de agua en PDFs con Python",
+      "created_at": "2025-07-23T22:18:43.496Z",
+      "updated_at": "2025-07-25T06:04:01.869Z",
+      "url": "https://www.youtube.com/watch?v=KdEbT6j53HA"
+    }
+  },
+  {
+    "model": "courses.video",
+    "pk": 5,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Tutorial Python PDFs",
+      "created_at": "2025-07-23T22:18:52.263Z",
+      "updated_at": "2025-07-25T06:03:08.726Z",
+      "url": "https://www.youtube.com/watch?v=kt0R-Txqhg4"
+    }
+  },
+  {
+    "model": "courses.video",
+    "pk": 6,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Generar tus propios PDFs",
+      "created_at": "2025-07-25T06:57:14.297Z",
+      "updated_at": "2025-07-25T06:57:14.297Z",
+      "url": "https://www.youtube.com/watch?v=BK35qAVQYSk"
+    }
+  },
+  {
+    "model": "courses.image",
+    "pk": 1,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Imagen de prueba",
+      "created_at": "2025-07-23T05:04:31.159Z",
+      "updated_at": "2025-07-23T05:04:31.159Z",
+      "file": "images/1984.jpg"
+    }
+  },
+  {
+    "model": "courses.text",
+    "pk": 1,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Introducción al curso por ricardo",
+      "created_at": "2025-07-09T19:57:09.775Z",
+      "updated_at": "2025-07-09T19:57:09.775Z",
+      "content": "Este es una prueba"
+    }
+  },
+  {
+    "model": "courses.text",
+    "pk": 2,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Bienvenida",
+      "created_at": "2025-08-15T17:35:26.855Z",
+      "updated_at": "2025-08-15T17:35:31.862Z",
+      "content": "Bienvenidos al curso de HTML"
+    }
+  },
+  {
+    "model": "courses.review",
+    "pk": 4,
+    "fields": {
+      "user": ["JuanAlumno"],
+      "course": 16,
+      "rating": 4,
+      "comment": "Excelente  curso",
+      "created_at": "2025-08-15T04:57:58.895Z"
+    }
+  },
+  {
+    "model": "courses.review",
+    "pk": 5,
+    "fields": {
+      "user": ["ricardo"],
+      "course": 16,
+      "rating": 4,
+      "comment": "Excelente curso, me gusto Django",
+      "created_at": "2025-08-15T07:29:28.421Z"
+    }
+  },
+  {
+    "model": "courses.progress",
+    "pk": 1,
+    "fields": {
+      "user": ["ricardo"],
+      "course": 16,
+      "status": "",
+      "updated_at": "2025-08-15T19:20:10.567Z",
+      "progress": 66.66666666666666
+    }
+  },
+  {
+    "model": "courses.progress",
+    "pk": 2,
+    "fields": {
+      "user": ["RicardoAlumno"],
+      "course": 16,
+      "status": "",
+      "updated_at": "2025-07-25T09:26:19.422Z",
+      "progress": 0.0
+    }
+  },
+  {
+    "model": "courses.progress",
+    "pk": 3,
+    "fields": {
+      "user": ["JuanAlumno"],
+      "course": 16,
+      "status": "",
+      "updated_at": "2025-08-16T03:09:47.835Z",
+      "progress": 66.66666666666666
+    }
+  },
+  {
+    "model": "courses.progress",
+    "pk": 4,
+    "fields": {
+      "user": ["JuanAlumno"],
+      "course": 5,
+      "status": "",
+      "updated_at": "2025-08-16T03:16:58.426Z",
+      "progress": 0.0
+    }
+  },
+  {
+    "model": "courses.progress",
+    "pk": 5,
+    "fields": {
+      "user": ["JuanAlumno"],
+      "course": 6,
+      "status": "",
+      "updated_at": "2025-08-14T20:42:17.589Z",
+      "progress": 0.0
+    }
+  },
+  {
+    "model": "courses.progress",
+    "pk": 6,
+    "fields": {
+      "user": ["JuanAlumno"],
+      "course": 7,
+      "status": "",
+      "updated_at": "2025-08-14T21:41:46.771Z",
+      "progress": 0.0
+    }
+  },
+  {
+    "model": "courses.progress",
+    "pk": 7,
+    "fields": {
+      "user": ["JuanAlumno"],
+      "course": 8,
+      "status": "",
+      "updated_at": "2025-08-15T17:26:25.102Z",
+      "progress": 0.0
+    }
+  },
+  {
+    "model": "courses.enrollment",
+    "pk": 1,
+    "fields": {
+      "user": ["ricardo"],
+      "course": 16,
+      "enrolled_at": "2025-07-24T05:16:26.782Z"
+    }
+  },
+  {
+    "model": "courses.enrollment",
+    "pk": 2,
+    "fields": {
+      "user": ["RicardoAlumno"],
+      "course": 16,
+      "enrolled_at": "2025-07-25T09:21:49.840Z"
+    }
+  },
+  {
+    "model": "courses.enrollment",
+    "pk": 3,
+    "fields": {
+      "user": ["JuanAlumno"],
+      "course": 16,
+      "enrolled_at": "2025-08-12T22:40:06.167Z"
+    }
+  },
+  {
+    "model": "courses.enrollment",
+    "pk": 4,
+    "fields": {
+      "user": ["JuanAlumno"],
+      "course": 5,
+      "enrolled_at": "2025-08-12T23:10:52.562Z"
+    }
+  },
+  {
+    "model": "courses.enrollment",
+    "pk": 5,
+    "fields": {
+      "user": ["JuanAlumno"],
+      "course": 6,
+      "enrolled_at": "2025-08-13T12:52:35.481Z"
+    }
+  },
+  {
+    "model": "courses.enrollment",
+    "pk": 6,
+    "fields": {
+      "user": ["JuanAlumno"],
+      "course": 7,
+      "enrolled_at": "2025-08-13T14:09:14.844Z"
+    }
+  },
+  {
+    "model": "courses.enrollment",
+    "pk": 7,
+    "fields": {
+      "user": ["JuanAlumno"],
+      "course": 8,
+      "enrolled_at": "2025-08-15T17:26:25.099Z"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 5,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Introducción a HTML",
+      "slug": "introducción-a-html",
+      "overview": "Curso sobre Introducción a HTML desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/gG1fvaYXRNmKMJTaMHYP_PYTHON-COVER%20(1).jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 6,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "CSS desde cero",
+      "slug": "css-desde-cero",
+      "overview": "Curso sobre CSS desde cero desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/gG1fvaYXRNmKMJTaMHYP_PYTHON-COVER%20(1).jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 7,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "JavaScript moderno",
+      "slug": "javascript-moderno",
+      "overview": "Curso sobre JavaScript moderno desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/gG1fvaYXRNmKMJTaMHYP_PYTHON-COVER%20(1).jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 8,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "React para principiantes",
+      "slug": "react-para-principiantes",
+      "overview": "Curso sobre React para principiantes desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/gG1fvaYXRNmKMJTaMHYP_PYTHON-COVER%20(1).jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 9,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Vue.js práctico",
+      "slug": "vue.js-práctico",
+      "overview": "Curso sobre Vue.js práctico desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/gG1fvaYXRNmKMJTaMHYP_PYTHON-COVER%20(1).jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 10,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Next.js profesional",
+      "slug": "next.js-profesional",
+      "overview": "Curso sobre Next.js profesional desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/gG1fvaYXRNmKMJTaMHYP_PYTHON-COVER%20(1).jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 11,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Node.js y Express",
+      "slug": "node.js-y-express",
+      "overview": "Curso sobre Node.js y Express desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/gG1fvaYXRNmKMJTaMHYP_PYTHON-COVER%20(1).jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 12,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "MongoDB completo",
+      "slug": "mongodb-completo",
+      "overview": "Curso sobre MongoDB completo desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/gG1fvaYXRNmKMJTaMHYP_PYTHON-COVER%20(1).jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 13,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "PostgreSQL desde cero",
+      "slug": "postgresql-desde-cero",
+      "overview": "Curso sobre PostgreSQL desde cero desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/gG1fvaYXRNmKMJTaMHYP_PYTHON-COVER%20(1).jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 14,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "REST APIs con Django",
+      "slug": "rest-apis-con-django",
+      "overview": "Curso sobre REST APIs con Django desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/gG1fvaYXRNmKMJTaMHYP_PYTHON-COVER%20(1).jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 15,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Flask intermedio",
+      "slug": "flask-intermedio",
+      "overview": "Curso sobre Flask intermedio desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/aA89gxXgTQGtRR7YojXB_DJANGO1.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 16,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "FastAPI para microservicios",
+      "slug": "fastapi-para-microservicios",
+      "overview": "Curso sobre FastAPI para microservicios desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/aA89gxXgTQGtRR7YojXB_DJANGO1.jpg",
+      "level": "Principiante",
+      "rating": 4.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 17,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Python para ciencia de datos",
+      "slug": "python-para-ciencia-de-datos",
+      "overview": "Curso sobre Python para ciencia de datos desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/aA89gxXgTQGtRR7YojXB_DJANGO1.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 18,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Pandas y NumPy",
+      "slug": "pandas-y-numpy",
+      "overview": "Curso sobre Pandas y NumPy desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/aA89gxXgTQGtRR7YojXB_DJANGO1.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 19,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Análisis de datos con Python",
+      "slug": "análisis-de-datos-con-python",
+      "overview": "Curso sobre Análisis de datos con Python desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/aA89gxXgTQGtRR7YojXB_DJANGO1.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 20,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Machine Learning con scikit-learn",
+      "slug": "machine-learning-con-scikit-learn",
+      "overview": "Curso sobre Machine Learning con scikit-learn desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/aA89gxXgTQGtRR7YojXB_DJANGO1.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 21,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Redes Neuronales con TensorFlow",
+      "slug": "redes-neuronales-con-tensorflow",
+      "overview": "Curso sobre Redes Neuronales con TensorFlow desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/aA89gxXgTQGtRR7YojXB_DJANGO1.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 22,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Deep Learning en Keras",
+      "slug": "deep-learning-en-keras",
+      "overview": "Curso sobre Deep Learning en Keras desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/aA89gxXgTQGtRR7YojXB_DJANGO1.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 23,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Docker y contenedores",
+      "slug": "docker-y-contenedores",
+      "overview": "Curso sobre Docker y contenedores desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/TTTUJiUVTvGC5cy5Z3UW_COVER-DEVTALLES-REACT.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 24,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Kubernetes para desarrolladores",
+      "slug": "kubernetes-para-desarrolladores",
+      "overview": "Curso sobre Kubernetes para desarrolladores desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/TTTUJiUVTvGC5cy5Z3UW_COVER-DEVTALLES-REACT.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 25,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Automatización con Python",
+      "slug": "automatización-con-python",
+      "overview": "Curso sobre Automatización con Python desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/TTTUJiUVTvGC5cy5Z3UW_COVER-DEVTALLES-REACT.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 26,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Git y GitHub",
+      "slug": "git-y-github",
+      "overview": "Curso sobre Git y GitHub desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/TTTUJiUVTvGC5cy5Z3UW_COVER-DEVTALLES-REACT.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 27,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "JavaScript para backend",
+      "slug": "javascript-para-backend",
+      "overview": "Curso sobre JavaScript para backend desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/TTTUJiUVTvGC5cy5Z3UW_COVER-DEVTALLES-REACT.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 28,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Curso de TypeScript",
+      "slug": "curso-de-typescript",
+      "overview": "Curso sobre Curso de TypeScript desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/TTTUJiUVTvGC5cy5Z3UW_COVER-DEVTALLES-REACT.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 29,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Desarrollo con Angular",
+      "slug": "desarrollo-con-angular",
+      "overview": "Curso sobre Desarrollo con Angular desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/TTTUJiUVTvGC5cy5Z3UW_COVER-DEVTALLES-REACT.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 30,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Go para backend",
+      "slug": "go-para-backend",
+      "overview": "Curso sobre Go para backend desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/dMU9FLDmQETZktVFX7gX_COVER-DEVTALLES3.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 31,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Go avanzado",
+      "slug": "go-avanzado",
+      "overview": "Curso sobre Go avanzado desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/dMU9FLDmQETZktVFX7gX_COVER-DEVTALLES3.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 32,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Microservicios con Go",
+      "slug": "microservicios-con-go",
+      "overview": "Curso sobre Microservicios con Go desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/dMU9FLDmQETZktVFX7gX_COVER-DEVTALLES3.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 33,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Desarrollo iOS con Swift",
+      "slug": "desarrollo-ios-con-swift",
+      "overview": "Curso sobre Desarrollo iOS con Swift desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/dMU9FLDmQETZktVFX7gX_COVER-DEVTALLES3.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 34,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Android con Kotlin",
+      "slug": "android-con-kotlin",
+      "overview": "Curso sobre Android con Kotlin desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/dMU9FLDmQETZktVFX7gX_COVER-DEVTALLES3.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 35,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "App híbridas con Flutter",
+      "slug": "app-híbridas-con-flutter",
+      "overview": "Curso sobre App híbridas con Flutter desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/dMU9FLDmQETZktVFX7gX_COVER-DEVTALLES3.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 36,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Backend con Laravel",
+      "slug": "backend-con-laravel",
+      "overview": "Curso sobre Backend con Laravel desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/dMU9FLDmQETZktVFX7gX_COVER-DEVTALLES3.jpg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 37,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Curso completo de PHP",
+      "slug": "curso-completo-de-php",
+      "overview": "Curso sobre Curso completo de PHP desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/a51yLvxNTUiTs5FbiBsx_COVER-DEVTALLES2.jpeg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 38,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Sistemas distribuidos",
+      "slug": "sistemas-distribuidos",
+      "overview": "Curso sobre Sistemas distribuidos desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/a51yLvxNTUiTs5FbiBsx_COVER-DEVTALLES2.jpeg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 39,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "APIs GraphQL",
+      "slug": "apis-graphql",
+      "overview": "Curso sobre APIs GraphQL desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/a51yLvxNTUiTs5FbiBsx_COVER-DEVTALLES2.jpeg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 40,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Selenium y pruebas automatizadas",
+      "slug": "selenium-y-pruebas-automatizadas",
+      "overview": "Curso sobre Selenium y pruebas automatizadas desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/a51yLvxNTUiTs5FbiBsx_COVER-DEVTALLES2.jpeg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 41,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "TDD con Django",
+      "slug": "tdd-con-django",
+      "overview": "Curso sobre TDD con Django desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/a51yLvxNTUiTs5FbiBsx_COVER-DEVTALLES2.jpeg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 42,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "CI/CD con GitHub Actions",
+      "slug": "ci/cd-con-github-actions",
+      "overview": "Curso sobre CI/CD con GitHub Actions desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/a51yLvxNTUiTs5FbiBsx_COVER-DEVTALLES2.jpeg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 43,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Despliegue con Heroku",
+      "slug": "despliegue-con-heroku",
+      "overview": "Curso sobre Despliegue con Heroku desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/a51yLvxNTUiTs5FbiBsx_COVER-DEVTALLES2.jpeg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 44,
+    "fields": {
+      "owner": ["ricardo"],
+      "title": "Scrum y metodologías ágiles",
+      "slug": "scrum-y-metodologías-ágiles",
+      "overview": "Curso sobre Scrum y metodologías ágiles desde cero hasta avanzado.",
+      "created_at": "2025-07-08",
+      "image": "https://import.cdn.thinkific.com/643563/a51yLvxNTUiTs5FbiBsx_COVER-DEVTALLES2.jpeg",
+      "level": "",
+      "rating": 0.0,
+      "duration": 0.0
+    }
+  },
+  {
+    "model": "profiles.instructorprofile",
+    "pk": 1,
+    "fields": {
+      "user": ["ricardo"],
+      "bio": "Soy programador :)",
+      "photo": "https://img-c.udemycdn.com/user/200_H/49501412_d4c3_2.jpg",
+      "website": null,
+      "linkedin_url": null,
+      "social_network": null
+    }
+  },
+  {
+    "model": "profiles.profile",
+    "pk": 1,
+    "fields": {
+      "user": ["ricardo"],
+      "company": "Devtalles 3",
+      "profession": "Ingeniero en sistemas",
+      "timezone": "UTC-5",
+      "photo": "profiles/henrycavill.jpg"
+    }
+  },
+  {
+    "model": "profiles.profile",
+    "pk": 2,
+    "fields": {
+      "user": ["ricardosignal"],
+      "company": "",
+      "profession": "",
+      "timezone": "",
+      "photo": ""
+    }
+  },
+  {
+    "model": "profiles.profile",
+    "pk": 4,
+    "fields": {
+      "user": ["juanitobanana"],
+      "company": "",
+      "profession": "",
+      "timezone": "UTC-6",
+      "photo": "profiles/pedropascal_xB9LYGe.webp"
+    }
+  },
+  {
+    "model": "profiles.profile",
+    "pk": 5,
+    "fields": {
+      "user": ["JuanAlumno"],
+      "company": "Devtalles",
+      "profession": "Backend",
+      "timezone": "UTC-6",
+      "photo": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2025-07-07T17:04:47.433Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "1",
+      "object_repr": "Web Development",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2025-07-07T17:04:53.908Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "2",
+      "object_repr": "Software development",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2025-07-07T17:04:58.748Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "3",
+      "object_repr": "Python",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2025-07-07T17:05:04.350Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "4",
+      "object_repr": "golang",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2025-07-07T17:05:08.629Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "5",
+      "object_repr": "django",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2025-07-07T17:11:02.356Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "5",
+      "object_repr": "django",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2025-07-07T17:11:02.356Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "4",
+      "object_repr": "golang",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2025-07-07T17:11:02.356Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "3",
+      "object_repr": "Python",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2025-07-07T17:11:02.356Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "2",
+      "object_repr": "Software development",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2025-07-07T17:11:02.356Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "1",
+      "object_repr": "Web Development",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2025-07-07T17:42:04.624Z",
+      "user": ["ricardo"],
+      "content_type": ["profiles", "user"],
+      "object_id": "2",
+      "object_repr": "ricardoProfe",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2025-07-07T17:42:16.475Z",
+      "user": ["ricardo"],
+      "content_type": ["profiles", "user"],
+      "object_id": "2",
+      "object_repr": "Ricardo Profe",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2025-07-07T17:43:00.130Z",
+      "user": ["ricardo"],
+      "content_type": ["profiles", "user"],
+      "object_id": "3",
+      "object_repr": "RicardoAlumno",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2025-07-07T17:43:06.691Z",
+      "user": ["ricardo"],
+      "content_type": ["profiles", "user"],
+      "object_id": "3",
+      "object_repr": "Ricardo Alumno",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2025-07-08T17:40:38.381Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "3",
+      "object_repr": "Python básico",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2025-07-08T17:40:58.580Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "4",
+      "object_repr": "Python Avanzado",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2025-07-08T18:49:16.365Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "4",
+      "object_repr": "Python Avanzado",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2025-07-08T18:49:16.365Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "3",
+      "object_repr": "Python básico",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2025-07-08T18:49:16.365Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "2",
+      "object_repr": "Curso prueba 2",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2025-07-08T18:49:16.365Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "1",
+      "object_repr": "Curso prueba 1",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "44",
+      "object_repr": "Scrum y metodologías ágiles",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "43",
+      "object_repr": "Despliegue con Heroku",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "42",
+      "object_repr": "CI/CD con GitHub Actions",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "41",
+      "object_repr": "TDD con Django",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "40",
+      "object_repr": "Selenium y pruebas automatizadas",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "39",
+      "object_repr": "APIs GraphQL",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "38",
+      "object_repr": "Sistemas distribuidos",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "37",
+      "object_repr": "Curso completo de PHP",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "36",
+      "object_repr": "Backend con Laravel",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "35",
+      "object_repr": "App híbridas con Flutter",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "34",
+      "object_repr": "Android con Kotlin",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "33",
+      "object_repr": "Desarrollo iOS con Swift",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "32",
+      "object_repr": "Microservicios con Go",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "31",
+      "object_repr": "Go avanzado",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "30",
+      "object_repr": "Go para backend",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "29",
+      "object_repr": "Desarrollo con Angular",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "28",
+      "object_repr": "Curso de TypeScript",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "27",
+      "object_repr": "JavaScript para backend",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "26",
+      "object_repr": "Git y GitHub",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "25",
+      "object_repr": "Automatización con Python",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "24",
+      "object_repr": "Kubernetes para desarrolladores",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "23",
+      "object_repr": "Docker y contenedores",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "22",
+      "object_repr": "Deep Learning en Keras",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "21",
+      "object_repr": "Redes Neuronales con TensorFlow",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "20",
+      "object_repr": "Machine Learning con scikit-learn",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "19",
+      "object_repr": "Análisis de datos con Python",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "18",
+      "object_repr": "Pandas y NumPy",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "17",
+      "object_repr": "Python para ciencia de datos",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "16",
+      "object_repr": "FastAPI para microservicios",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "15",
+      "object_repr": "Flask intermedio",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "14",
+      "object_repr": "REST APIs con Django",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "13",
+      "object_repr": "PostgreSQL desde cero",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "12",
+      "object_repr": "MongoDB completo",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "11",
+      "object_repr": "Node.js y Express",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "10",
+      "object_repr": "Next.js profesional",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "9",
+      "object_repr": "Vue.js práctico",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "8",
+      "object_repr": "React para principiantes",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "7",
+      "object_repr": "JavaScript moderno",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "6",
+      "object_repr": "CSS desde cero",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+      "action_time": "2025-07-09T04:24:40.325Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "5",
+      "object_repr": "Introducción a HTML",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+      "action_time": "2025-07-09T04:24:48.260Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "10",
+      "object_repr": "DevOps",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+      "action_time": "2025-07-09T04:24:48.260Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "9",
+      "object_repr": "Mobile Development",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+      "action_time": "2025-07-09T04:24:48.260Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "8",
+      "object_repr": "Machine Learning",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+      "action_time": "2025-07-09T04:24:48.260Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "7",
+      "object_repr": "Data Science",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+      "action_time": "2025-07-09T04:24:48.260Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "6",
+      "object_repr": "JavaScript",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+      "action_time": "2025-07-09T04:24:48.260Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "5",
+      "object_repr": "Django",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+      "action_time": "2025-07-09T04:24:48.260Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "4",
+      "object_repr": "Golang",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+      "action_time": "2025-07-09T04:24:48.260Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "3",
+      "object_repr": "Python",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+      "action_time": "2025-07-09T04:24:48.260Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "2",
+      "object_repr": "Software Development",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+      "action_time": "2025-07-09T04:24:48.260Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "1",
+      "object_repr": "Web Development",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+      "action_time": "2025-07-09T04:52:05.587Z",
+      "user": ["ricardo"],
+      "content_type": ["profiles", "user"],
+      "object_id": "1",
+      "object_repr": "Ricardo Cuéllar",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+      "action_time": "2025-07-09T05:00:36.183Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "10",
+      "object_repr": "DevOps",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+      "action_time": "2025-07-09T05:00:36.183Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "9",
+      "object_repr": "Mobile Development",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+      "action_time": "2025-07-09T05:00:36.183Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "8",
+      "object_repr": "Machine Learning",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+      "action_time": "2025-07-09T05:00:36.183Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "7",
+      "object_repr": "Data Science",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+      "action_time": "2025-07-09T05:00:36.183Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "6",
+      "object_repr": "JavaScript",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+      "action_time": "2025-07-09T05:00:36.183Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "5",
+      "object_repr": "Django",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+      "action_time": "2025-07-09T05:00:36.183Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "4",
+      "object_repr": "Golang",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+      "action_time": "2025-07-09T05:00:36.183Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "3",
+      "object_repr": "Python",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+      "action_time": "2025-07-09T05:00:36.183Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "2",
+      "object_repr": "Software Development",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+      "action_time": "2025-07-09T05:00:36.183Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "category"],
+      "object_id": "1",
+      "object_repr": "Web Development",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "44",
+      "object_repr": "Scrum y metodologías ágiles",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "43",
+      "object_repr": "Despliegue con Heroku",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "42",
+      "object_repr": "CI/CD con GitHub Actions",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "41",
+      "object_repr": "TDD con Django",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "40",
+      "object_repr": "Selenium y pruebas automatizadas",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "39",
+      "object_repr": "APIs GraphQL",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "38",
+      "object_repr": "Sistemas distribuidos",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "37",
+      "object_repr": "Curso completo de PHP",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "36",
+      "object_repr": "Backend con Laravel",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "35",
+      "object_repr": "App híbridas con Flutter",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 92,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "34",
+      "object_repr": "Android con Kotlin",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 93,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "33",
+      "object_repr": "Desarrollo iOS con Swift",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 94,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "32",
+      "object_repr": "Microservicios con Go",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 95,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "31",
+      "object_repr": "Go avanzado",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 96,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "30",
+      "object_repr": "Go para backend",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 97,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "29",
+      "object_repr": "Desarrollo con Angular",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 98,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "28",
+      "object_repr": "Curso de TypeScript",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 99,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "27",
+      "object_repr": "JavaScript para backend",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 100,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "26",
+      "object_repr": "Git y GitHub",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 101,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "25",
+      "object_repr": "Automatización con Python",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 102,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "24",
+      "object_repr": "Kubernetes para desarrolladores",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 103,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "23",
+      "object_repr": "Docker y contenedores",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 104,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "22",
+      "object_repr": "Deep Learning en Keras",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 105,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "21",
+      "object_repr": "Redes Neuronales con TensorFlow",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 106,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "20",
+      "object_repr": "Machine Learning con scikit-learn",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 107,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "19",
+      "object_repr": "Análisis de datos con Python",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 108,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "18",
+      "object_repr": "Pandas y NumPy",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 109,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "17",
+      "object_repr": "Python para ciencia de datos",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 110,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "16",
+      "object_repr": "FastAPI para microservicios",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 111,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "15",
+      "object_repr": "Flask intermedio",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 112,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "14",
+      "object_repr": "REST APIs con Django",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 113,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "13",
+      "object_repr": "PostgreSQL desde cero",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 114,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "12",
+      "object_repr": "MongoDB completo",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 115,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "11",
+      "object_repr": "Node.js y Express",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 116,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "10",
+      "object_repr": "Next.js profesional",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 117,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.461Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "9",
+      "object_repr": "Vue.js práctico",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 118,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.462Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "8",
+      "object_repr": "React para principiantes",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 119,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.462Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "7",
+      "object_repr": "JavaScript moderno",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 120,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.462Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "6",
+      "object_repr": "CSS desde cero",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 121,
+    "fields": {
+      "action_time": "2025-07-09T05:00:43.462Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "5",
+      "object_repr": "Introducción a HTML",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 122,
+    "fields": {
+      "action_time": "2025-07-09T05:30:20.762Z",
+      "user": ["ricardo"],
+      "content_type": ["profiles", "instructorprofile"],
+      "object_id": "1",
+      "object_repr": "Instructor: Ricardo Cuéllar",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"User\", \"Bio\", \"Photo\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 123,
+    "fields": {
+      "action_time": "2025-07-09T05:30:29.088Z",
+      "user": ["ricardo"],
+      "content_type": ["profiles", "instructorprofile"],
+      "object_id": "1",
+      "object_repr": "Instructor: Ricardo Cuéllar",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 124,
+    "fields": {
+      "action_time": "2025-07-09T06:24:01.548Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "course"],
+      "object_id": "16",
+      "object_repr": "FastAPI para microservicios",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Level\", \"Rating\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 125,
+    "fields": {
+      "action_time": "2025-07-09T19:24:27.036Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "module"],
+      "object_id": "7",
+      "object_repr": "FastAPI para microservicios - Introducción al curso",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 126,
+    "fields": {
+      "action_time": "2025-07-09T19:24:49.165Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "module"],
+      "object_id": "8",
+      "object_repr": "FastAPI para microservicios - Introducción a FAST API",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 127,
+    "fields": {
+      "action_time": "2025-07-09T19:25:13.619Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "module"],
+      "object_id": "9",
+      "object_repr": "FastAPI para microservicios - API con FAST API",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 128,
+    "fields": {
+      "action_time": "2025-07-09T19:56:39.884Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "content"],
+      "object_id": "1",
+      "object_repr": "Content object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 129,
+    "fields": {
+      "action_time": "2025-07-09T19:57:09.775Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "text"],
+      "object_id": "1",
+      "object_repr": "Introducción al curso por ricardo",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 130,
+    "fields": {
+      "action_time": "2025-07-09T19:58:02.959Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "content"],
+      "object_id": "2",
+      "object_repr": "Content object (2)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 131,
+    "fields": {
+      "action_time": "2025-07-09T19:58:29.280Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "video"],
+      "object_id": "1",
+      "object_repr": "¿Qué es FAST API?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 132,
+    "fields": {
+      "action_time": "2025-07-09T19:58:57.674Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "content"],
+      "object_id": "2",
+      "object_repr": "Content object (2)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Object id\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 133,
+    "fields": {
+      "action_time": "2025-07-09T20:52:27.445Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "content"],
+      "object_id": "3",
+      "object_repr": "Content object (3)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 134,
+    "fields": {
+      "action_time": "2025-07-09T20:52:47.729Z",
+      "user": ["ricardo"],
+      "content_type": ["courses", "video"],
+      "object_id": "2",
+      "object_repr": "¿Cómo hacer preguntas?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 135,
+    "fields": {
+      "action_time": "2025-07-22T03:19:12.604Z",
+      "user": ["ricardo"],
+      "content_type": ["auth", "group"],
+      "object_id": "1",
+      "object_repr": "Intructores",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 136,
+    "fields": {
+      "action_time": "2025-07-22T03:19:56.804Z",
+      "user": ["ricardo"],
+      "content_type": ["profiles", "user"],
+      "object_id": "2",
+      "object_repr": "Ricardo Profe",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 137,
+    "fields": {
+      "action_time": "2025-07-22T19:28:09.550Z",
+      "user": ["ricardo"],
+      "content_type": ["profiles", "user"],
+      "object_id": "1",
+      "object_repr": "Ricardo Cuéllar",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Is instructor\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 138,
+    "fields": {
+      "action_time": "2025-08-06T02:32:38.499Z",
+      "user": ["ricardo"],
+      "content_type": ["profiles", "profile"],
+      "object_id": "1",
+      "object_repr": "Perfil de ricardo",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 139,
+    "fields": {
+      "action_time": "2025-08-07T01:05:12.111Z",
+      "user": ["ricardo"],
+      "content_type": ["profiles", "user"],
+      "object_id": "4",
+      "object_repr": "ricardoprueba",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 140,
+    "fields": {
+      "action_time": "2025-08-07T01:05:14.481Z",
+      "user": ["ricardo"],
+      "content_type": ["profiles", "user"],
+      "object_id": "4",
+      "object_repr": "ricardoprueba",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 141,
+    "fields": {
+      "action_time": "2025-08-07T01:10:58.863Z",
+      "user": ["ricardo"],
+      "content_type": ["profiles", "user"],
+      "object_id": "5",
+      "object_repr": "ricardosignal",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 142,
+    "fields": {
+      "action_time": "2025-08-12T22:39:27.805Z",
+      "user": ["ricardo"],
+      "content_type": ["profiles", "user"],
+      "object_id": "8",
+      "object_repr": "JuanAlumno",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  }
+]

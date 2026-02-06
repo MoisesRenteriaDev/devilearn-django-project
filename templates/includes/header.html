@@ -1,0 +1,12 @@
+<!-- Header -->
+<div class="header">
+    <form class="search-box" method="get">
+        <i class="fa-solid fa-magnifying-glass icon"></i>
+        <input type="text" placeholder="Buscar..." name="q" value="{%if query%}{{query}}{%endif%}"/>
+    </form>
+    <div class="header-right">
+        <div class="avatar">
+            <img src="{{ profile_picture }}" alt="User" />
+        </div>
+    </div>
+</div>
